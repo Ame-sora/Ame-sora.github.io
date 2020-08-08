@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-08-08T22:05:15.370Z</updated>
+  <updated>2020-08-08T23:12:48.499Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="/2020/08/10/%E6%B5%8B%E8%AF%95/"/>
+    <id>/2020/08/10/测试/</id>
+    <published>2020-08-10T13:04:31.000Z</published>
+    <updated>2020-08-08T23:12:48.499Z</updated>
+    
+    <summary type="html">
+    
+      测试
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="杂项" scheme="/tags/%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>数论</title>
@@ -43,7 +63,7 @@
     <link href="/2020/08/08/My-First-Post/"/>
     <id>/2020/08/08/My-First-Post/</id>
     <published>2020-08-08T13:04:31.000Z</published>
-    <updated>2020-08-08T21:59:17.612Z</updated>
+    <updated>2020-08-08T22:45:27.859Z</updated>
     
     <summary type="html">
     
