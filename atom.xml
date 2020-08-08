@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-08-08T23:12:48.499Z</updated>
+  <updated>2020-08-08T23:20:34.208Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2020/08/10/%E6%B5%8B%E8%AF%95/"/>
     <id>/2020/08/10/测试/</id>
     <published>2020-08-10T13:04:31.000Z</published>
-    <updated>2020-08-08T23:12:48.499Z</updated>
+    <updated>2020-08-08T23:20:34.208Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Oi" scheme="/categories/Oi/"/>
     
     
       <category term="杂项" scheme="/tags/%E6%9D%82%E9%A1%B9/"/>
@@ -55,26 +55,6 @@
       <category term="Oi" scheme="/tags/Oi/"/>
     
       <category term="数学" scheme="/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My First Post</title>
-    <link href="/2020/08/08/My-First-Post/"/>
-    <id>/2020/08/08/My-First-Post/</id>
-    <published>2020-08-08T13:04:31.000Z</published>
-    <updated>2020-08-08T22:45:27.859Z</updated>
-    
-    <summary type="html">
-    
-      测试
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="杂项" scheme="/tags/%E6%9D%82%E9%A1%B9/"/>
     
   </entry>
   
