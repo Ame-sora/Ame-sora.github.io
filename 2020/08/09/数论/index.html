@@ -38,7 +38,7 @@
   mashiro_option.site_url = "https://ame-sora.github.io/";
   mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
   mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
-  mashiro_option.mathjax = "0";
+  mashiro_option.mathjax = "1";
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
@@ -456,13 +456,13 @@
 <p>$\begin{aligned}\sum_{i=1}^n\sum_{j=1}^n\gcd(i,j)\end{aligned}$</p>
 <p>=$\begin{aligned}\sum_{i=1}^n\sum_{j=1}^n\sum_{d|i,j}d[gcd(\frac{i}{d},\frac{j}{d})==1]\end{aligned}$</p>
 <p>$Code$</p>
-<pre><code class="cpp">inline int gcd(int x , int y){
+<pre><code class="lang-.cpp">inline int gcd(int x , int y){
     return y == 0 ? x : gcd(y , x % y);
 }
 </code></pre>
 <p>假如你听懂了这个东西并且会写for循环，你可以做掉这个题<a href="https://www.luogu.com.cn/problem/UVA11417" target="_blank" rel="noopener">UVA11417 GCD</a></p>
 <p>$Code$</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -498,13 +498,12 @@ inline int Ame_(){
 
 int Ame__ = Ame_();
 
-int main(){;} 
+int main(){;}
 </code></pre>
 <p>这是一个复杂度为 $O(n^2)$</p>
 <p>假如你会一，，的莫比乌斯反演你可以做掉这个题<a href="https://www.luogu.com.cn/problem/UVA11424" target="_blank" rel="noopener">UVA11424 GCD - Extreme(I)</a></p>
 <p>如何去推柿子呢</p>
-<p>$$\sum_{i=1}^{n}\sum_{j=i+1}^{n}\gcd(i,j)$$</p>
-<p>你会发现在计算j时重复计算了i的那么我们考虑先将其看作单独的i，j，随后将重复部分减去即可</p>
+<script type="math/tex; mode=display">\sum_{i=1}^{n}\sum_{j=i+1}^{n}\gcd(i,j)</script><p>你会发现在计算j时重复计算了i的那么我们考虑先将其看作单独的i，j，随后将重复部分减去即可</p>
 <p>$\begin{aligned}\sum_{i = 1}^n\sum_{j = 1}^n\gcd(i, j)= \sum_{d = 1}^nd\sum_{i = 1}^n\sum_{j = 1}^n[\gcd(i, j) = d]=\sum_{d = 1}^nd\sum_{x=1}^{\left\lfloor\frac n d\right\rfloor}\mu(p)\left\lfloor\frac n {dp}\right\rfloor\left\lfloor\frac n {dp}\right\rfloor\end{aligned}=\begin{aligned}\sum_{Q = 1}^n\sum_{d|Q}d*\mu(\frac Q{d})\left\lfloor\frac n {Q}\right\rfloor^2\end{aligned}=\begin{aligned}\sum_{Q = 1}^n\varphi(Q)\left\lfloor\frac n {Q}\right\rfloor^2\end{aligned}$</p>
 <p>到了这里,我们发现对于$[gcd(i,j)=1]$我们可以根据莫比乌斯函数的定义$\begin{aligned}\sum_{d\mid n}\mu(d) =[n=1]\end{aligned}$来进行替换，即</p>
 <p>$\begin{aligned}\sum_{d=1}^n\sum_{i=1}^\frac{n}{d}\sum_{j=1}^\frac{n}{d}\sum_{p\mid i,j}\mu(p)\end{aligned}$</p>
@@ -518,7 +517,7 @@ int main(){;}
 <p>$id_0*id_1=σ$<br>然后你会发现他还有一个题<a href="https://www.luogu.com.cn/problem/UVA11426" target="_blank" rel="noopener">UVA11426 拿行李（极限版） GCD - Extreme (II)</a>你发现他的n更大了，然后你会惊奇的发现如果用上面的柿子可以过掉这个题，然后你会发现还有一个题<a href="https://www.luogu.com.cn/problem/SP3871" target="_blank" rel="noopener">SP3871 GCDEX - GCD Extreme</a>,一模一样<del>这样你就有了三倍的经验</del></p>
 <p>不对，是四倍<a href="https://www.luogu.com.cn/problem/P1390" target="_blank" rel="noopener">P1390公约数求和</a>,不对是五倍，还有一个阉割版本<a href="https://www.luogu.com.cn/problem/P2398" target="_blank" rel="noopener">P2398 GCD SUM</a>对于这个题<a href="https://www.luogu.com.cn/problem/P3327" target="_blank" rel="noopener">P3327 [SDOI2015]约数个数和</a>就是多处理了一个m，而且数据范围很小筛$\mu$就可以了</p>
 <p>$Code$</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -579,7 +578,7 @@ int main(){;}
 </code></pre>
 <p>阉割版代码<br>复杂度约为 $O(n + \sqrt n)$</p>
 <p>$Code$</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -662,7 +661,7 @@ signed main(){;}
 <p>将dp用k更换之后有$\begin{aligned}\sum_{k=1}^n\sum_{p\in prime}\mu(d)\left \lfloor \frac{n}{k} \right \rfloor\left \lfloor \frac{m}{k} \right \rfloor\end{aligned}$</p>
 <p>最后在筛的时候维护一个前缀和即可</p>
 <p>$Code$</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -744,7 +743,7 @@ int main(){;}
 <p>之后令$g=gcd(a,b)$<br>则 $lcm(a,b)=a*b/g$<br>又 $ax+lcm(a,b)+by-lcm(a,b)=c$</p>
 <p>故有 $a(x+b/g)+b(y-a/g)=c$<br>由此可得，$x$ 加上或减去任意倍数的 $b/gcd(a,b)$ 后均有对应的y的解<br>令 $t=b/g$， $(x\%t+t)\%t$ 就是x的最小非负解</p>
 <p>$Code$</p>
-<pre><code class="cpp">inline void exgcd(LL a , LL b , LL &amp;x , LL &amp;y){
+<pre><code class="lang-.cpp">inline void exgcd(LL a , LL b , LL &amp;x , LL &amp;y){
       if(b == 0){
             x = 1;
             y = 0;
@@ -759,7 +758,7 @@ int main(){;}
 <p>特殊的，对于同余式 $a≡1(modp)$的一个解是 <em>a</em> 在模 <em>p</em> 意义下的逆元</p>
 <p><a href="https://www.luogu.com.cn/problem/P1082" target="_blank" rel="noopener">P1082同余方程</a></p>
 <p>$Code$</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -814,7 +813,7 @@ int main(){;}
 <p><img src="https://bkimg.cdn.bcebos.com/formula/3299b84e0579640e7850b0557cdfcad1.svg" alt="无题"></p>
 <p>还有一个结论，有个毒瘤题用到了$\varphi(i\times j) = \huge{\left(\frac{\varphi(i) \times \varphi(j) \times \gcd(i,j)}{\varphi(\gcd(i,j))}\right)}$</p>
 <p>一般没有裸题，板子有线性筛<br><a href="https://www.luogu.com.cn/problem/P3383" target="_blank" rel="noopener">P3383 【模板】线性筛素数</a><del>这题别告诉我你没过</del></p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -863,7 +862,7 @@ int main(){;}
 </code></pre>
 <p>同时你也可以用欧拉筛去筛选莫比乌斯函数$\mu(n)$和欧拉函数$\varphi(n)$</p>
 <p>$Code$</p>
-<pre><code class="cpp">inline void pri(){
+<pre><code class="lang-.cpp">inline void pri(){
     for(int i = 2;i &lt;= N;i ++){
         if(!ispri[i]){
             prime[++ cnt] = i;
@@ -890,7 +889,7 @@ int main(){;}
 <h4 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h4><p>假设$M=\begin{matrix} \prod_{i=1}^k m_i \end{matrix}$ , $M_i=\frac{M}{m_i}$ , $M_i<em>t_i\equiv 1 \pmod{m_i}$<br>其中有其中$1≤i≤k1$<br>显然，$M$表示所有方程组的模的乘积；$M_i$​表示除第$i$个方程外，其余所有方程的模的乘积；$t_i$​则为$M_i$​的逆元<br>我们可以求出其中一解为我们可以构造出一个解$x=\begin{matrix} \sum_{i=1}^k a_iM_it_i \end{matrix}$<br>对于任意的解$x_0$可表示为$x+k</em>M$<br>则可求出最小正整数解为$x_{min}=x_0$%M</p>
 <p>例题<a href="https://www.luogu.com.cn/problem/P1495" target="_blank" rel="noopener">P1495模板</a></p>
 <p>$Code$</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+<pre><code class="lang-.cpp">#include&lt;bits/stdc++.h&gt;
 
 #define LL long long
 
@@ -1016,6 +1015,11 @@ int main(){;}
   </div><!-- #primary -->
 </div>
 
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
 
 
     </div>    
@@ -1419,6 +1423,21 @@ $(document).ready(function() {
       }
     })
   });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
